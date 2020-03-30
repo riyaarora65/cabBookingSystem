@@ -1,8 +1,6 @@
-import  practice.cabBooking.models.customer;
-import  practice.cabBooking.models.driver;
-import  practice.cabBooking.models.rating.*;
+package cabbooking.models;
 
-package practice.cabBooking.models;
+import  cabbooking.models.rating.*;
 
 public class Trip{
 
@@ -13,7 +11,7 @@ public class Trip{
 
 	public Trip(Customer customer, Driver driver, CustomerRating customerRatings, DriverRating driverRatings){
 		
-		this.coustomerRatings = customerRatings;
+		this.customerRatings = customerRatings;
 		this.customer = customer;
 		this.driverRatings = driverRatings;
 		this.driver = driver;
@@ -41,10 +39,10 @@ public class Trip{
 	}
 
 	public void setDriverRating(DriverRating driverRatings){
-		this.driverRating = driverRatings;
+		this.driverRatings = driverRatings;
 	}
 
-	public CustomerRating getCustomerRatings(){
+	public CustomerRating getCustomerRating(){
 		return customerRatings;
 	}
 

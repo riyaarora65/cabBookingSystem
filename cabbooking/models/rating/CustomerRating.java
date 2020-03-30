@@ -1,12 +1,13 @@
-package practice.cabBooking.models.rating;
-import practice.cabBooking.models.Customer;
+package cabbooking.models.rating;
+import cabbooking.models.Customer;
+
 
 public class CustomerRating extends Rating
 {
 
 	private Customer customer;
 
-	public CustomerRating(Customer customer, Rating rating){
+	public CustomerRating(Customer customer, Integer rating){
 		super(rating);
 		this.customer = customer;
 	}

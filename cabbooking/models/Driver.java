@@ -1,12 +1,13 @@
-package practice.cabBooking.models;
+package cabbooking.models;
 
 public class Driver{
 
+	private static int count = 0;
 	private String id;
 	private String name;
 
-	public Driver(String id, String name){
-		this.id = id;
+	public Driver(String name){
+		this.id = Integer.toString(count++);
 		this.name = name;
 	}
 

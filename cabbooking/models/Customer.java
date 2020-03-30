@@ -1,12 +1,13 @@
-package practice.cabBooking.models;
+package cabbooking.models;
 
 public class Customer{
 
+	private static int count = 0;
 	private String id;
 	private String name;
 
-	public Customer(String id, String name){
-		this.id = id;
+	public Customer(String name){
+		this.id = Integer.toString(count++);
 		this.name = name;
 	}
 
@@ -17,7 +18,6 @@ public class Customer{
 	public void setId(String id){
 		this.id = id; 
 	}
-
 	public String getName(){
 		return name;
 	}

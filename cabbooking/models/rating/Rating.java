@@ -1,4 +1,4 @@
-package practice.cabBooking.models.rating;
+package cabbooking.models.rating;
 
 public class Rating
 {
