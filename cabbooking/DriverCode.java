@@ -21,13 +21,15 @@ public class DriverCode{
 
 		tripManager.addTrip("c1", "d1", "5", "4");
 		tripManager.addTrip("c2", "d1", "4", "5");
-		tripManager.addTrip("c3", "d1", "2", "1");
+		tripManager.addTrip("c3", "d1", "5", "1");
 		tripManager.addTrip("c1", "d2", "1", "5");
 		tripManager.addTrip("c2", "d2", "5", "5");
 		tripManager.addTrip("c3", "d2", "5", "4");
 		tripManager.addTrip("c1", "d3", "2", "3");
 		tripManager.addTrip("c2", "d3", "5", "4");
-		tripManager.addTrip("c3", "d3", "3", "3");
+		tripManager.addTrip("c3", "d3", "5", "3");
+
+		tripManager.calculateTotalRatings();
 
 		Scanner sc = new Scanner(System.in);
 
