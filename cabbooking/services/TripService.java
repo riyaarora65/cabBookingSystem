@@ -24,4 +24,4 @@ public class TripService {
 
             return new Trip(customer, driver, currentCustomerRating, currentDriverRating);
     }       
-    }s
+    }
