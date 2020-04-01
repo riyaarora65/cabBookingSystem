@@ -66,8 +66,8 @@ public class TripManager {
 	{
 		Customer customer = getCustomerFromMap(customerName);
 		Driver driver = getDriverFromMap(driverName);
-		Trip newtrip = TripService.createTrip(customer, driver, customerRated, driverRated);
-		trips.add(newtrip);
+			Trip newtrip = TripService.createTrip(customer, driver, customerRated, driverRated);
+			trips.add(newtrip);
 	}
 
 	public void calculateTotalRatings() {

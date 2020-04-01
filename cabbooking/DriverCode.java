@@ -34,11 +34,38 @@ public class DriverCode{
 		Scanner sc = new Scanner(System.in);
 
 		while(true){
+			try{
 				String customerName = sc.nextLine();
+
+				if(customerName == null){
+					throw new NullPointerException();
+				}
 
 				tripManager.showAverageRatingCustomer(customerName);
 
 				tripManager.findElegibleDriver(customerName);
+			}
+			catch(NullPointerException e){
+				System.out.println("Something went wrong "+ e.toString());
+				return;
+			}
+
+			catch(ArithmeticException e){
+				System.out.println("Please enter valid Inputs "+ e.toString());
+				return;
+			}
+			catch(NumberFormatException e){
+				System.out.print("Please enter valid inputs "+ e.toString());
+				return;
+			}
+			catch(IllegalArgumentException e3){
+				System.out.print("Please enter valid inputs "+ e3.toString());
+				return;
+			}
+			catch(RuntimeException e4){
+				System.out.println("Something went wrong "+e4.toString());
+				return;
+			}
 		}
 		}
 }
