@@ -23,11 +23,5 @@ public class TripService {
             DriverRating currentDriverRating = new DriverRating(driver, driverRated);
 
             return new Trip(customer, driver, currentCustomerRating, currentDriverRating);
-    }
-        
-
-
-
-            
-    }
-}
+    }       
+    }s
