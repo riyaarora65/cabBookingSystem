@@ -5,7 +5,7 @@ import cabbooking.models.Customer;
 import cabbooking.models.Driver;
 import java.util.Scanner;
 
-public class DriverCode{
+public class DriverCode {
 	public static void main(String args[]){
 		TripManager tripManager = new TripManager();
 
@@ -18,16 +18,29 @@ public class DriverCode{
 		tripManager.addDriver(new Driver("d2"));
 		tripManager.addDriver(new Driver("d3"));
 
-
-		tripManager.addTrip("c1", "d1", "5", "4");
-		tripManager.addTrip("c2", "d1", "4", "5");
-		tripManager.addTrip("c3", "d1", "5", "1");
-		tripManager.addTrip("c1", "d2", "1", "5");
-		tripManager.addTrip("c2", "d2", "5", "5");
-		tripManager.addTrip("c3", "d2", "5", "4");
-		tripManager.addTrip("c1", "d3", "2", "3");
-		tripManager.addTrip("c2", "d3", "5", "4");
-		tripManager.addTrip("c3", "d3", "5", "3");
+		try{
+			tripManager.addTrip("c1", "d1", "5", "4");
+			tripManager.addTrip("null", "d1", "4", "5");
+			tripManager.addTrip("c3", "d1", "5", "1");
+			tripManager.addTrip("c1", "d2", "1", "5");
+			tripManager.addTrip("c2", "d2", "5", "5");
+			tripManager.addTrip("c3", "d2", "5", "4");
+			tripManager.addTrip("c1", "d3", "2", "3");
+			tripManager.addTrip("c2", "d3", "5", "4");
+			tripManager.addTrip("c3", "d3", "5", "3");
+		}
+		catch(NumberFormatException e){
+			System.out.print("Please enter valid inputs "+ e.toString());
+			return;
+		}
+		catch(IllegalArgumentException e3){
+			System.out.print("Please enter valid inputs "+ e3.toString());
+			return;
+		}
+		catch(NullPointerException e){
+			System.out.println("Something went wrong "+ e.toString());
+			return;
+		}
 
 		tripManager.calculateTotalRatings();
 

@@ -49,6 +49,10 @@ public class TripManager {
 				customer = currentCustomer.getValue();
 			}
 		}
+
+		if(customer == null){
+			throw new NullPointerException();
+		}
 		return customer;
 	}
 
@@ -124,6 +128,11 @@ public class TripManager {
 	}
 
 	public double getCustomerAvgRating(String customerID) {
+
+		if(customerID.equals("")){
+			throw new IllegalArgumentException();
+		}
+
 		double avgRating = 0.0;
 
 		for (Map.Entry<String, Double> currentCustomerAvgRating : customersAverageRating.entrySet()) {
@@ -155,7 +164,6 @@ public class TripManager {
 				break;
 			}
 		}
-
 		double avgRating = getCustomerAvgRating(customerId);
 		printCustomerAverageRating(avgRating);
 	}
